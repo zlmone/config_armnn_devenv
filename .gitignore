@@ -1,0 +1,6 @@
+depends/
+armnn/
+
+ArmNN
+libArmNN
+build.log
