@@ -1,5 +1,5 @@
 depends/
-armnn/
+armnn/.git/
 
 ArmNN
 libArmNN
