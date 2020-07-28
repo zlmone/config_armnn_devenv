@@ -9,10 +9,10 @@
 
 namespace armnn
 {
-void ConfigureLogging(bool printToStandardOutput, bool printToDebugOutput, LogSeverity severity)
+void ConfigureLogging(bool printToStandardOutput, bool printToDebugOutput, LogSeverity severity, std::string log_dir_path)
 {
     using armnnUtils::ConfigureLogging;
-    ConfigureLogging(boost::log::core::get().get(), printToStandardOutput, printToDebugOutput, severity);
+    ConfigureLogging(boost::log::core::get().get(), printToStandardOutput, printToDebugOutput, severity, log_dir_path);
 }
 
 // Defaults to logging completely disabled.

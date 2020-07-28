@@ -429,7 +429,11 @@ endif()
 
 install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
 
-target_link_libraries(armnn ${Boost_LOG_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_SYSTEM_LIBRARY})
+find_package(Boost 1.64.0 REQUIRED COMPONENTS log)
+include_directories(${Boost_INCLUDE_DIRS})
+link_directories(${Boost_LIBRARY_DIRS})
+
+target_link_libraries(armnn ${Boost_LIBRARIES} ${Boost_LOG_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_SYSTEM_LIBRARY})
 
 if(ARMCOMPUTENEON OR ARMCOMPUTECL)
     target_link_libraries(armnn ${ARMCOMPUTE_LIBRARIES})

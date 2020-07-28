@@ -16,6 +16,7 @@ namespace armnnUtils
 void ConfigureLogging(boost::log::core* core,
                       bool              printToStandardOutput,
                       bool              printToDebugOutput,
-                      armnn::LogSeverity severity);
+                      armnn::LogSeverity severity,
+                      std::string       log_dir_path="");
 
 }

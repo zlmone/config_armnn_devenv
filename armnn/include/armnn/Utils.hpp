@@ -26,6 +26,6 @@ enum class LogSeverity
 ///     printToDebugOutput: Set to true if log messages be printed to a platform-specific debug output
 ///       (where supported).
 ///     severity: All log messages that are at this severity level or higher will be printed, others will be ignored.
-void ConfigureLogging(bool printToStandardOutput, bool printToDebugOutput, LogSeverity severity);
+void ConfigureLogging(bool printToStandardOutput, bool printToDebugOutput, LogSeverity severity, std::string log_dir_path="");
 
 } // namespace armnn
